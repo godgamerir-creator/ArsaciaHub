@@ -13,8 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Extract Source
+        run: unzip -o ArsaciaHubAndroid_CloudBuild.zip -d .
 
       - name: Set up Java
         uses: actions/setup-java@v4
